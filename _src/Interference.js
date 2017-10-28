@@ -1,7 +1,7 @@
 const FuzzyRules = [
 	{
 		emosi: "TS",
-		provokasi: "R",
+		provokasik: "R",
 		hoax: "T"
 	},
 	{
@@ -81,16 +81,11 @@ const FuzzyRules = [
 	},
 ]
 
-const FuzzyOutput = {
-	"T": [],
-	"A": [],
-	"Y": []
-}
 const GetFuzzyOutput = input => {
 	let output = new Map()
 	input.emosi.map(e => {
 		input.provokasi.map(p => {
-			console.log(p.linguistik + "-" + e.linguistik)
+			// console.log(p.linguistik + "-" + e.linguistik)
 			let o = {
 				hoax: FuzzyRules.filter(f => f.emosi == e.linguistik && f.provokasi == p.linguistik)[0].hoax,
 				deg: Math.min(e.deg, p.deg)

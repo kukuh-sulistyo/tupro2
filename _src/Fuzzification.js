@@ -108,7 +108,7 @@ const GetFuzzyInputEmosi = x => { // Trapesium
 const GetFuzzyInput = (emosi, provokasi) => { // Trapesium
 	let a = new Object();	
 	a.provokasi = GetFuzzyInputProvokasi(provokasi);
-	a.emosi = GetFuzzyInputEmosi(provokasi);
+	a.emosi = GetFuzzyInputEmosi(emosi);
 		
 	return a
 }
